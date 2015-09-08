@@ -33,3 +33,98 @@
 
 (= (#(* 2 %) 11) 22)
 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #10: Intro to Maps
+
+; What I typed in the box:
+
+20
+
+;Since both hash-map calls retrieved the value associated with the key of :b
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #16: Hello World
+
+; What I typed in the box:
+
+#(str "Hello, " % "!")
+
+; Which is a function to print out 'Hello, ', followed by the input, followed by an exclamation point
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem 17 - Sequences: Map
+
+;What I typed in the box:
+
+'(6 7 8)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem 18 - Sequences: Filter
+
+'(6 7)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem 20 - Penultimate Element
+
+#(first (rest (reverse %)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem 21 - Nth Element
+
+#(last (take (+ %2 1) %1))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem 23 - Reverse a Sequence
+
+#(into '() %)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem 25 - Find the odd numbers
+
+filter #(= 1 (mod % 2))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem 37 - Regular Expressions
+
+"ABC"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem 40 - Interpose a Seq
+
+#(drop-last (interleave %2 (cycle [%1])))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem 43 - Reverse Interleave
+
+#(apply map list (partition %2 %1))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem 44 - Rotate Sequence
+
+#(concat (subvec (vec %2) (mod %1 (count %2))) (subvec (vec %2) 0 (mod %1 (count %2))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem 46 - Flipping out
+
+(fn [x] (fn [& y] (apply x (reverse y))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem 47 - Contain yourself
+
+4
